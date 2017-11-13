@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"0a038d8a1b","applicationID":"58118275","transactionName":"Z1JbYxcDXhVSWhUMWF4YdGEmTXUUQVYTLVZeU1VeCwVzCV1NEwpbXFJLGCsNRCBcTA8B","queueTime":0,"applicationTime":20,"agent":"","atts":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+                <meta name="og:title" content="404 - Visitstockholm" />
+
+    
+    
+    <title>404 - Visitstockholm</title>
+    <script>
+        (function (H) { H.className = H.className.replace(/\bno-js\b/, 'js'); })(document.documentElement);
+    </script>
+    <!--[if (lt IE 9) & (!IEMobile)]>
+    <script type="text/javascript" src="/ui/js/vendor/html5/html5shiv.js"> </script>
+    <link href="/ui/style/css/ie.min.css" rel="stylesheet"/>
+    <![endif]-->
+    <!--[if (gt IE 8) | (IEMobile)]><!-->
+    <link href="/stylesheet/head.css?v=B1r_5fGfA8AcKuN6cYVToxC6T4iAnlFagbJUPNH5_4U1" rel="stylesheet"/>
+
+    <!--<![endif]-->
+    <script>
+        window.grunticon = function (e) { if (e && 3 === e.length) { var t = window, n = !(!t.document.createElementNS || !t.document.createElementNS("http://www.w3.org/2000/svg", "svg").createSVGRect || !document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1") || window.opera && -1 === navigator.userAgent.indexOf("Chrome")), o = function (o) { var r = t.document.createElement("link"), a = t.document.getElementsByTagName("script")[0]; r.rel = "stylesheet", r.href = e[o && n ? 0 : o ? 1 : 2], a.parentNode.insertBefore(r, a) }, r = new t.Image; r.onerror = function () { o(!1) }, r.onload = function () { o(1 === r.width && 1 === r.height) }, r.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" } };
+        grunticon(["/ui/img/icon/icons.data.svg.css", "/ui/img/icon/icons.data.png.css", "/ui/img/icon/icons.fallback.css"]);
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-T7TLFGR');</script>
+    <!-- End Google Tag Manager -->
+    <noscript><link href="/ui/img/icon/icons.fallback.css" rel="stylesheet"></noscript>
+    
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7TLFGR"
+                height="0" width="0" style="display: none; visibility: hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    
+    <div id="document">
+<header class="header">
+    <div class="header-content">
+        <a href="/">
+            <div class="logo"></div>
+        </a>
+        <div class="navigation" data-js-toggle="container">
+            <div class="navigation__top">
+                <div class="search" data-js-toggle="target">
+                    <input type="text" placeholder="Search" class="search-input" data-js-toggle="focus" data-js-language="en">
+                    <div class="search-result"></div>
+                </div>
+                <div class="social-channels">
+                    <a class="social-channels__link social-channels__link--fb external" title="Visit Stockholm on Facebook" href="https://www.facebook.com/visitstockholm" target="_blank" rel=" external"></a>
+                    <a class="social-channels__link social-channels__link--insta external" title="Visit Stockholm on Instagram" href="https://www.instagram.com/visitstockholm" target="_blank" rel=" external"></a>
+                    <a class="social-channels__link social-channels__link--twitter external" title="Visit Stockholm on Twitter" href="https://twitter.com/visitstockholm" target="_blank" rel=" external"></a>
+                </div>
+                <div class="toggle-search">
+                    <button onclick="dataLayer.push({'event': 'searchIcon'})" data-js-toggle="click" class="button button--toggle-search"></button>
+                </div>
+            </div>
+            <nav class="global-navigation" role="navigation">
+                <ul class="global-navigation__list">
+                    <li class="global-navigation__link">
+                        <a href="http://www.stockholmbusinessregion.se/en/" class="">About us</a>
+                    </li>
+                    <li class="global-navigation__link">
+                        <a href="http://press.stockholmbusinessregion.se/" class="">Press</a>
+                    </li>
+
+                    <li class="global-navigation__link global-navigation__link--other" data-js-toggle="container">
+                        <button data-js-toggle="click" class="button button--other-sites">Our websites</button>
+                        <ul class="other-sites" data-js-toggle="target">
+                                <li>
+                                    <a href="/">Visitor</a>
+                                </li>
+                                <li>
+                                    <a href="https://professionals.visitstockholm.com/">Travel Trade</a>
+                                </li>
+                                <li>
+                                    <a href="https://professionals.visitstockholm.com/">Meeting Planner</a>
+                                </li>
+                                <li>
+                                    <a href="https://professionals.visitstockholm.com/">Event Organizer</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.investstockholm.com/">Investor</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.investstockholm.com/move-to-stockholm/">Talent</a>
+                                </li>
+                                <li>
+                                    <a href="http://foretag.stockholm.se/">F&#246;retagare - in Swedish</a>
+                                </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<div class="hero" data-background-image="">
+    <div class="hero__wrapper">
+            <h2 class="hero__title">404</h2>
+            </div>
+</div>
+        <div class="content-wrapper">
+            
+	
+
+<style>
+    .hero {
+        background-color: #03b9af;
+        background-image: none;
+    }
+
+    .error-text-container {
+        margin: 0 auto;
+        max-width: 1550px;
+        text-align: center;
+        padding: 20px;
+    }
+
+        .error-text-container h2 {
+            font-size: 2.5em;
+        }
+
+    .content {
+        padding: 20px 0;
+    }
+
+    .notfound-search-wrapper {
+        max-width: 720px;
+        margin: 20px auto;
+        position: relative;
+        text-align:left;
+    }
+
+    .notfound-search-input {
+        background-color: #03b9af;
+        color: #fff;
+        border: none;
+        padding: 0 45px 0 20px;
+        line-height: 12;
+        height: 45px;
+        box-sizing: border-box;
+        border-radius: 0;
+        width: 100%;
+    }
+
+    .notfound-search-wrapper:before {
+        font-size: 25px;
+        font-family: "Icomoon";
+        content: "\e603";
+        position: absolute;
+        top: 7px;
+        right: 10px;
+        display: block;
+        color:#fff;
+    }
+
+    .notfound-search-result .result-heading {
+        text-align: left;
+    }
+</style>
+
+<div class="content">
+    <div class="error-text-container">
+        <h2>Unfortunately we cannot find the page you&#39;ve requested…</h2>
+        <div>
+            <p><span>Please use the search box to find what you are looking for.</span></p>
+        </div>
+        <div class="notfound-search-wrapper">
+            <input type="text" class="notfound-search-input" data-js-language="en">
+            <div class="notfound-search-result"></div>
+        </div>
+    </div>
+</div>
+
+
+
+        </div>
+
+
+<footer class="footer">
+    <section class="footer-section footer-section--links">
+            <ul class="footer-links footer-links--areas">
+                    <li>
+                        <a href="/good-to-know/to-and-from-the-airports/" class="footer-link footer-link--has-image footer-link--airports">
+                            <p class="footer-link__icon"></p>
+                            <p class="footer-link__text">To and from the airports</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/good-to-know/getting-around/" class="footer-link footer-link--has-image footer-link--getting-around">
+                            <p class="footer-link__icon"></p>
+                            <p class="footer-link__text">Getting around</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/good-to-know/wifi-spots/" class="footer-link footer-link--has-image footer-link--wifi-spots">
+                            <p class="footer-link__icon"></p>
+                            <p class="footer-link__text">Wifi spots</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/good-to-know/ferries-and-cruise-ships/" class="footer-link footer-link--has-image footer-link--ferries-ships">
+                            <p class="footer-link__icon"></p>
+                            <p class="footer-link__text">Ferries and cruise ships</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/good-to-know/tourist-information-centers/" class="footer-link footer-link--has-image footer-link--tourist-centers">
+                            <p class="footer-link__icon"></p>
+                            <p class="footer-link__text">Tourist information centers</p>
+                        </a>
+                    </li>
+            </ul>
+
+            <ul class="footer-links footer-links--about">
+                    <li>
+                        <a class="footer-link link--arrow" href="/good-to-know/about-visit-stockholm/">About visitstockholm.com</a>
+                    </li>
+            </ul>
+
+
+        <ul class="footer-links footer-links--links">
+            <li>
+                <a href="http://www.stockholmbusinessregion.se/en/" class="footer-link">About us</a>
+            </li>
+            <li>
+                <a href="http://press.stockholmbusinessregion.se/" class="footer-link">Press</a>
+            </li>
+                <li>
+                    <button data-js-function="toggle-other-sites--footer" class="button button--toggle-other-sites">Our websites</button>
+
+                    <ul class="link-group link-group--other-sites">
+                            <li><a href="/" class="footer-link ">Visitor</a></li>
+                            <li><a href="https://professionals.visitstockholm.com/" class="footer-link ">Travel Trade</a></li>
+                            <li><a href="https://professionals.visitstockholm.com/" class="footer-link ">Meeting Planner</a></li>
+                            <li><a href="https://professionals.visitstockholm.com/" class="footer-link ">Event Organizer</a></li>
+                            <li><a href="http://www.investstockholm.com/" class="footer-link ">Investor</a></li>
+                            <li><a href="http://www.investstockholm.com/move-to-stockholm/" class="footer-link ">Talent</a></li>
+                            <li><a href="http://foretag.stockholm.se/" class="footer-link ">F&#246;retagare - in Swedish</a></li>
+                    </ul>
+
+                </li>
+        </ul>
+    </section>
+
+    <section class="footer-section footer-section--sender">
+        <div class="sender">
+            <div class="sender-group">
+                <div class="sender__logotype">
+                    <img title="City of Stockholm" src="/ui/dist/assets/img/logo_sterik.svg " alt="City of Stockholm">
+                </div>
+
+                <div class="sender__address">
+                        <h4 class="bold"> Visit Stockholm AB</h4>
+                                            <p>City of Stockholm</p>
+                        <p>Box 16282, 103 25 Stockholm, Sweden</p>
+                                            <h5 class="footer-label">Visiting address</h5>
+                                            <p>Stockholm Visitor Center, Sergels Torg 5</p>
+                </div>
+            </div>
+
+            <div class="sender-group">
+                    <h5 class="footer-label">Phone:</h5>
+                                        <p><a class="link" href="tel:+46850828508">+46 (0)8-508 285 08 (Stockholm Visitor Center)</a></p>
+                        <p><a class="link" href="tel:+46850828500">+46 (0)8-508 28 500 (Operator)</a></p>
+                                    <h5 class="footer-label">Email:</h5>
+                                    <p>
+                        <a class="link link--arrow" title="touristinfo@stockholm.se" href="mailto:touristinfo@stockholm.se">touristinfo@stockholm.se</a>
+                    </p>
+            </div>
+
+            <div class="sender-group sender-group--mobile">
+                <ul class="social-channels">
+                    <li><a class="social-channels__link social-channels__link--fb external" title="Visit Stockholm on Facebook" href="https://www.facebook.com/visitstockholm" target="_blank" rel=" external"></a></li>
+                    <li><a class="social-channels__link social-channels__link--insta external" title="Visit Stockholm on Instagram" href="https://www.instagram.com/visitstockholm" target="_blank" rel=" external"></a></li>
+                    <li><a class="social-channels__link social-channels__link--twitter external" title="Visit Stockholm on Twitter" href="https://twitter.com/visitstockholm" target="_blank" rel=" external"></a></li>
+                </ul>
+            </div>
+
+            <div class="sender-group sender-group--desktop">
+                    <ul>
+                            <li><a href="/good-to-know/about-visit-stockholm/" class="footer-link link--arrow">About visitstockholm.com</a></li>
+                    </ul>
+            </div>
+        </div>
+    </section>
+</footer>
+
+    </div>
+
+    <script src="/javascript/body.js?v=5QKQRdoZ_NGk15JkQuXvXpkO4xXkS4TBDs-kFrHyBeI1"></script>
+
+</body>
+</html>
+
