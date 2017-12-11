@@ -6960,7 +6960,7 @@ ul {
     height: 61px;
     padding: 0
 }
-.area__select {
+.area_select {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -6973,12 +6973,12 @@ ul {
     width: 180px;
     box-sizing: border-box
 }
-.area__select:after {
+.area_select:after {
     content: '▾';
     position: absolute;
     right: 10px
 }
-.area__select:hover {
+.area_select:hover {
     cursor: pointer
 }
 .area__list {
